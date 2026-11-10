@@ -128,3 +128,27 @@ body {
   box-shadow: inset 1px 0 0 rgba(255, 255, 255, 0.08);
 }
 
+/* Printable Boarding Pass Styles */
+@media print {
+  header, footer, nav, .no-print, [role="status"] {
+    display: none !important;
+  }
+  body {
+    background-color: #ffffff !important;
+    color: #000000 !important;
+  }
+  .glass-panel-gold, .glass-panel {
+    border: 1px solid #cccccc !important;
+    background: #ffffff !important;
+    color: #000000 !important;
+    box-shadow: none !important;
+  }
+  .gold-text-gradient {
+    color: #000000 !important;
+    -webkit-text-fill-color: #000000 !important;
+  }
+  .text-white {
+    color: #000000 !important;
+  }
+}
+
