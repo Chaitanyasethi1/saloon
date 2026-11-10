@@ -1,0 +1,130 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 10 10 11; /* #0A0A0B */
+  --foreground: 245 245 247;
+  --card: 17 17 20; /* #111114 */
+  --card-subtle: 23 23 27; /* #17171B */
+  --gold-primary: #E6C887;
+  --gold-secondary: #B8893B;
+  --copper-glow: #D98B73;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  color-scheme: dark;
+}
+
+body {
+  background-color: #0A0A0B;
+  color: #F5F5F7;
+  min-height: 100vh;
+  overflow-x: hidden;
+  font-feature-settings: "rlig" 1, "calt" 1;
+}
+
+/* Custom Luxury Gold Scrollbar */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0A0A0B;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #E6C887 0%, #B8893B 100%);
+  border-radius: 9999px;
+  opacity: 0.8;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #E6C887;
+}
+
+/* Text Selection Styling */
+::selection {
+  background: rgba(230, 200, 135, 0.25);
+  color: #F7ECCF;
+}
+
+/* Glassmorphism Luxury Utilities */
+.glass-panel {
+  background: rgba(17, 17, 20, 0.7);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.45);
+}
+
+.glass-panel-gold {
+  background: linear-gradient(135deg, rgba(230, 200, 135, 0.07) 0%, rgba(184, 137, 59, 0.02) 100%);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(230, 200, 135, 0.2);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5), 0 0 20px -5px rgba(230, 200, 135, 0.15);
+}
+
+.glass-dropdown {
+  background: rgba(17, 17, 20, 0.95);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.8);
+}
+
+/* Gold Gradient Text */
+.gold-text-gradient {
+  background: linear-gradient(135deg, #FFF1D6 0%, #E6C887 40%, #B8893B 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.copper-text-gradient {
+  background: linear-gradient(135deg, #FADCD2 0%, #D98B73 60%, #B8893B 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Subtle Film Grain / Noise Overlay */
+.bg-noise {
+  background-image: radial-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 0);
+  background-size: 24px 24px;
+}
+
+/* Boarding Pass Ticket Cutout Stems */
+.ticket-notch-left {
+  position: relative;
+}
+.ticket-notch-left::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -12px;
+  transform: translateY(-50%);
+  width: 24px;
+  height: 24px;
+  background-color: #0A0A0B;
+  border-radius: 50%;
+  box-shadow: inset -1px 0 0 rgba(255, 255, 255, 0.08);
+}
+.ticket-notch-left::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: -12px;
+  transform: translateY(-50%);
+  width: 24px;
+  height: 24px;
+  background-color: #0A0A0B;
+  border-radius: 50%;
+  box-shadow: inset 1px 0 0 rgba(255, 255, 255, 0.08);
+}
+

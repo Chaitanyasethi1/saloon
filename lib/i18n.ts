@@ -1,0 +1,43 @@
+export type Language = 'en' | 'hi';
+
+export const DICTIONARY = {
+  en: {
+    heroTitle1: "Book your turn.",
+    heroTitle2: "Skip the wait.",
+    heroSub: "Never sit idly in a crowded waiting lounge again. Reserve bespoke salon services, track your live token ticket in real time, and walk in right as your chair is ready.",
+    bookToken: "Book a Token",
+    listSalon: "List My Salon Free",
+    findSalons: "Find Salons",
+    howItWorks: "How It Works",
+    forOwners: "For Salon Owners",
+    tvDisplay: "TV Kiosk Display",
+    liveQueue: "Live Queue",
+    estWait: "Est. Wait",
+    peopleAhead: "Ahead",
+    nowServing: "Now Serving",
+    yourToken: "Your Live Token",
+    signIn: "Sign In",
+    signOut: "Sign Out",
+    allMetros: "All Metros",
+  },
+  hi: {
+    heroTitle1: "अपनी बारी बुक करें।",
+    heroTitle2: "इंतज़ार से बचें।",
+    heroSub: "भीड़भाड़ वाले वेटिंग लाउंज में अब इंतज़ार करने की ज़रूरत नहीं। अपनी पसंदीदा सेवाएं चुनें, लाइव टोकन ट्रैक करें और चेयर तैयार होते ही पहुंचें।",
+    bookToken: "टोकन बुक करें",
+    listSalon: "सैलून रजिस्टर करें",
+    findSalons: "सैलून खोजें",
+    howItWorks: "यह कैसे काम करता है",
+    forOwners: "सैलून मालिकों के लिए",
+    tvDisplay: "टीवी डिस्प्ले",
+    liveQueue: "लाइव कतार",
+    estWait: "अनुमानित समय",
+    peopleAhead: "आगे लोग",
+    nowServing: "वर्तमान टोकन",
+    yourToken: "आपका टोकन",
+    signIn: "लॉग इन",
+    signOut: "लॉग आउट",
+    allMetros: "सभी शहर",
+  },
+};
+
