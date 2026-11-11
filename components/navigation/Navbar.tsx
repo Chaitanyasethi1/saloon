@@ -13,8 +13,10 @@ import {
   ShieldAlert,
   Tv,
   Scissors,
+  Globe,
 } from "lucide-react";
 import { useQueueWiseStore } from "@/lib/db/store";
+import { toast } from "sonner";
 
 export default function Navbar() {
   const pathname = usePathname();
@@ -31,6 +33,14 @@ export default function Navbar() {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  const [lang, setLang] = useState<"en" | "hi">("en");
+
+  const toggleLanguage = () => {
+    const nextLang = lang === "en" ? "hi" : "en";
+    setLang(nextLang);
+    toast.info(nextLang === "hi" ? "भाषा बदलकर हिन्दी कर दी गई" : "Language switched to English");
+  };
 
   const getDashboardLink = () => {
     if (!currentUser) return "/login";
@@ -207,6 +217,16 @@ export default function Navbar() {
                 Sign In
               </Link>
             )}
+
+            {/* Language Switcher */}
+            <button
+              onClick={toggleLanguage}
+              className="flex items-center gap-1 px-2.5 py-1.5 rounded-full bg-white/[0.04] hover:bg-white/[0.08] border border-white/10 text-xs font-mono text-zinc-300 hover:text-gold-200 transition-colors"
+              title="Toggle English / हिन्दी"
+            >
+              <Globe className="w-3.5 h-3.5 text-gold-300" />
+              <span>{lang === "en" ? "EN" : "हिन्दी"}</span>
+            </button>
 
             {/* Quick Action CTA */}
             <Link

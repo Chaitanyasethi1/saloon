@@ -107,3 +107,4 @@ describe("QueueWise Token Engine Tests", () => {
     assert.equal(canCancelToken("15:00", "14:45", 30), false);
   });
 });
+
